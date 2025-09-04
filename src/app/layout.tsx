@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex flex-col p-4">
+      <body className="flex flex-col p-2">
         <ThemeProvider>
           <Header />
           {children}

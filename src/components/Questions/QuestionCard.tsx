@@ -7,7 +7,7 @@ type QuestionCardProps = {
 export default function QuestionCard({ question }: QuestionCardProps) {
   const { questionNumber, question: questionText, options } = question;
   return (
-    <div className="flex flex-col gap-4 rounded-2xl shadow-lg p-6 border border-gray-300 dark:border-gray-800 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 transition-all">
+    <div className="flex flex-col gap-4 rounded-2xl shadow-lg p-4 border border-gray-300 dark:border-gray-800 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 transition-all">
       <div className="flex items-center justify-between mb-2">
         <span className="text-xs font-semibold text-gray-400 dark:text-gray-500">
           Question #{questionNumber}

@@ -16,7 +16,7 @@ body {
 }
 
 .button-view {
-  @apply flex gap-2 items-center text-gray-600 dark:text-gray-300 rounded-full p-2 cursor-pointer hover:bg-gray-700 px-4;
+  @apply flex gap-2 items-center text-gray-600 dark:text-gray-300 rounded-full cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 py-1.5 px-4;
 }
 
 .button-view.active {
