@@ -23,7 +23,7 @@ export default function QuestionCard({ question }: QuestionCardProps) {
         {options.map(({ isCorrect, option, text }: QuestionOption, idx) => (
           <li
             key={idx}
-            className={`flex items-center gap-2 rounded-xl px-3 py-2 border transition-all ${
+            className={`flex items-center gap-2 rounded-xl px-3 py-2.5 border transition-all ${
               isCorrect
                 ? "border-green-400 bg-green-50 dark:bg-green-900/10 text-green-700 dark:text-green-100"
                 : "border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-300"
