@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header/Header";
+import { ThemeProvider } from "@/providers/theme/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "KROK Tests",
@@ -14,7 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="max-w-6xl m-auto">{children}</body>
+      <body className="flex flex-col p-4">
+        <ThemeProvider>
+          <Header />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
