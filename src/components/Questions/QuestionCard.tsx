@@ -31,11 +31,6 @@ export default function QuestionCard({ question }: QuestionCardProps) {
           >
             <span className="text-blue-600 dark:text-blue-300">{option}.</span>
             <span className="flex-1">{text}</span>
-            {isCorrect && (
-              <span className="ml-2 text-xs bg-green-200 dark:bg-green-800 text-green-900 dark:text-green-100 px-2 py-1 rounded-full font-semibold shadow">
-                Correct
-              </span>
-            )}
           </li>
         ))}
       </ul>
