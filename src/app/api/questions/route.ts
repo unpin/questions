@@ -7,6 +7,7 @@ export async function GET() {
     const questions = await Question.find().sort({ questionNumber: 1 });
     return Response.json(questions);
   } catch (error) {
+    console.error(error);
     return Response.json(
       { error: "Failed to fetch questions" },
       { status: 500 }
