@@ -15,6 +15,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
+        <meta
+          name="theme-color"
+          content="#f3f4f6"
+          media="(prefers-color-scheme: light)"
+        />
+        <meta
+          name="theme-color"
+          content="#101828"
+          media="(prefers-color-scheme: dark)"
+        />
+      </head>
       <body className="flex flex-col p-2">
         <ThemeProvider>
           <Header />

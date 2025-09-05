@@ -9,6 +9,8 @@ body {
 
 body {
   @apply font-sans bg-gray-100 dark:bg-gray-900;
+  padding-top: env(safe-area-inset-top, 0);
+  padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
 .pagination-button {
