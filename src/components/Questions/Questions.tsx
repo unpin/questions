@@ -15,10 +15,15 @@ export default function Questions() {
 
   useEffect(() => {
     async function fetchQuestions() {
-      const res = await fetch("/api/questions");
-      const data = await res.json();
-      setQuestions(data);
-      setLoading(false);
+      try {
+        const res = await fetch("/api/questions");
+        const data = await res.json();
+        setQuestions(data);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
     }
     fetchQuestions();
   }, []);
