@@ -12,6 +12,10 @@ export default function QuestionCard({ question }: QuestionCardProps) {
   const [translation, setTranslation] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  useEffect(() => {
+    setTranslation("");
+  }, [question]);
+
   const handleTranslate = async () => {
     try {
       setIsLoading(true);
@@ -43,8 +47,8 @@ export default function QuestionCard({ question }: QuestionCardProps) {
             disabled={isLoading}
             onClick={handleTranslate}
             className={`block button-translate ${
-              isLoading ? "animate-pulse" : ""
-            } ${showTranslation ? "active" : ""}`}
+              isLoading ? "animate-pulse text-blue-400" : ""
+            }`}
           >
             <Translate />
           </button>
